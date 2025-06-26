@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI INVEST HUB</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f8ff;
+      color: #002244;
+    }
+
+    header {
+      background-color: #003366;
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1rem;
+    }
+
+    .hero {
+      padding: 2rem;
+      text-align: center;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .content {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .image-section {
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .image-section img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    form {
+      background: #e6f0ff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    form input, form button {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 0.3rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    form button {
+      background-color: #003366;
+      color: white;
+      border: none;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #0055aa;
+    }
+
+    .contact {
+      background-color: #e6f0ff;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      background-color: #002244;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div><strong>AI INVEST HUB</strong></div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Experience the Future of Trading!</h1>
+    <p>Trading with AI is amazing — smart, fast, and extremely profitable. Our intelligent system analyzes Forex and cryptocurrency markets in real time, executing trades for you with precision and speed.</p>
+    <p>Whether you have trading knowledge or not, our AI does all the work — no need to learn complex charts or strategies.</p>
+    <p><strong>With up to 75% profit guaranteed within 24 hours</strong>, anyone can now trade and earn confidently. Let technology work for you while you relax.</p>
+    <p><strong>The lowest amount to invest is $25 (approx. KSh 3,250).</strong></p>
+    <p><strong>Profits are paid directly to your account number after 24 hours.</strong></p>
+    <p><strong>Start today and join countless others enjoying hands-free, AI-powered profit.</strong> Your journey to financial success begins here!</p>
+  </section>
+
+  <section class="content">
+    <div class="image-section">
+      <h2>Live Forex & Crypto Trends</h2>
+      <img src="WhatsApp Image 2025-06-26 at 13.07.57_037c1668.jpg" alt="Forex and Crypto Charts">
+    </div>
+
+    <div class="image-section">
+      <h2>See 75% Profit in 24 Hours</h2>
+      <img src="WhatsApp Image 2025-06-26 at 13.08.41_6af547ef.jpg" alt="Phone showing 75% profit">
+    </div>
+
+    <div class="image-section">
+      <h2>Our AI Trading in Action</h2>
+      <img src="WhatsApp Image 2025-06-26 at 13.07.58_7db19e2c.jpg" alt="Forex Live Graphs">
+    </div>
+  </section>
+
+  <section class="content">
+    <h2>Join the AI Trading Revolution</h2>
+    <p>Fill in your details below to get started. The minimum investment is <strong>$25 (approx. KSh 3,250)</strong>.</p>
+
+    <form action="https://formsubmit.co/aitradinghubinvestnecitizen@gmail.com" method="POST" onsubmit="return validateAmount()">
+      
+      <!-- Auto-reply message -->
+      <input type="hidden" name="_autoresponse" value="Thank you for contacting AI Investment Hub – where intelligent trading meets real results. 🤖📈
+
+We're excited to have you on board! Our platform uses cutting-edge AI technology to help you trade Forex and crypto with confidence — whether you're a beginner or an expert.
+Expect up to 75% profit potential within 24 hours, all automated and stress-free.
+
+📌 One of our team members will get back to you shortly.
+Meanwhile, feel free to explore more or reply to this email if you have specific questions.
+
+💸 Profits are paid directly to your account number after 24 hours.
+
+To your success,
+
+Investing is simple! Just fill in your name, phone number, and investment amount (minimum $25).
+Our AI system takes over — analyzing markets, placing trades, and delivering profits.
+No experience needed. No stress. Just smart, automated trading with up to 75% returns in 24 hours.
+
+✅ Join Now. Let AI trade for you!">
+
+      <label for="name">Full Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="phone">Phone Number:</label><br>
+      <input type="tel" id="phone" name="phone" required><br><br>
+
+      <label for="amount">Amount to Invest (USD):</label><br>
+      <input type="number" id="amount" name="amount" min="25" required><br><br>
+
+      <button type="submit">Submit & Get Started</button>
+    </form>
+  </section>
+
+  <section class="contact">
+    <p>📧 Contact us: <a href="mailto:aitradinghubinvestnecitizen@gmail.com">aitradinghubinvestnecitizen@gmail.com</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 AI Invest Hub. All rights reserved.
+  </footer>
+
+  <script>
+    function validateAmount() {
+      const amount = document.getElementById("amount").value;
+      if (parseFloat(amount) < 25) {
+        alert("⚠️ The minimum investment is $25 (approx. KSh 3,250). Please enter a valid amount.");
+        return false;
+      }
+      return true;
+    }
+  </script>
+
+</body>
+</html>
