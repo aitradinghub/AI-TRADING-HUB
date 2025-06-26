@@ -1,156 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AI INVEST HUB</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #eef6ff;
-      color: #002244;
-    }
-    header {
-      background-color: #003366;
-      padding: 1rem 2rem;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 1rem;
-    }
-    .hero {
-      padding: 2rem;
-      text-align: center;
-      background: linear-gradient(to right, #4facfe, #00f2fe);
-      color: white;
-    }
-    .content {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    .image-section {
-      margin: 2rem 0;
-      text-align: center;
-    }
-    .image-section img {
-      width: 100%;
-      max-width: 500px;
-      display: block;
-      margin: 0 auto;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.15);
-    }
-    form {
-      background: #e6f0ff;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    form input, form button {
-      width: 100%;
-      padding: 0.8rem;
-      margin-top: 0.3rem;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-    form button {
-      background-color: #003366;
-      color: white;
-      border: none;
-      margin-top: 1rem;
-      cursor: pointer;
-    }
-    .contact {
-      background-color: #e6f0ff;
-      padding: 1rem;
-      text-align: center;
-    }
-    footer {
-      background-color: #002244;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div><strong>AI INVEST HUB</strong></div>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
+<!-- Include Chart.js in your <head> -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-  <section class="hero">
-    <h1>Experience the Future of Trading!</h1>
-    <p>🚀 Trade smarter, not harder. Our AI does all the work — you just earn.</p>
-    <p>✅ No charts, no stress. Up to <strong>75% profit within 24 hours</strong></p>
-    <p>💰 <strong>Profits are paid directly to your account</strong> — no delays.</p>
-    <p>🔒 Secure. Fast. 100% Automated. Minimum to invest: <strong>$25</strong></p>
-  </section>
+<!-- Add this inside <body> where you want the graph -->
+<div style="max-width: 600px; margin: 40px auto;">
+  <canvas id="barChart"></canvas>
+</div>
 
-  <section class="content">
-    <div class="image-section">
-      <img src="graph1.jpg" alt="Forex graph showing market analysis by AI">
-    </div>
-    <div class="image-section">
-      <img src="profit.jpg" alt="Phone screen showing 75% profit growth">
-    </div>
-    <div class="image-section">
-      <img src="ai-graph.jpg" alt="Automated AI system executing profitable trades">
-    </div>
-  </section>
-
-  <section class="content">
-    <form action="https://formsubmit.co/aitradinghubinvestnecitizen@gmail.com" method="POST" onsubmit="return validateAmount()">
-      <input type="hidden" name="_autoresponse" value="🎉 Thank you for contacting AI INVEST HUB – where intelligent trading meets real results! Our AI platform will analyze your submission and one of our team members will reach out shortly. Meanwhile, relax and let AI take over your trading journey. 💹">
-
-      <label for="name">Full Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Your Email Address:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="country">Your Country:</label>
-      <input type="text" id="country" name="country" required>
-
-      <label for="phone">Phone Number:</label>
-      <input type="tel" id="phone" name="phone" required>
-
-      <label for="amount">Amount to Invest (USD):</label>
-      <input type="number" id="amount" name="amount" min="25" required>
-
-      <button type="submit">Submit & Get Started</button>
-    </form>
-  </section>
-
-  <section class="contact">
-    <p>📧 Email us directly: <a href="mailto:aitradinghubinvestnecitizen@gmail.com">aitradinghubinvestnecitizen@gmail.com</a></p>
-  </section>
-
-  <footer>
-    &copy; 2025 AI INVEST HUB. All rights reserved. | Designed for profit with AI 💹
-  </footer>
-
-  <script>
-    function validateAmount() {
-      const amount = document.getElementById("amount").value;
-      if (parseFloat(amount) < 25) {
-        alert("⚠️ The minimum investment is $25. Please enter a valid amount.");
-        return false;
+<!-- Script to create the chart -->
+<script>
+  const ctxBar = document.getElementById('barChart').getContext('2d');
+  const barChart = new Chart(ctxBar, {
+    type: 'bar',
+    data: {
+      labels: ['Your Profit', 'Platform Share', 'Reserve/Fees'],
+      datasets: [{
+        label: 'Profit Distribution (%)',
+        data: [75, 15, 10],
+        backgroundColor: ['#00b894', '#0984e3', '#ffeaa7'],
+        borderColor: '#333',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+          max: 100,
+          ticks: {
+            stepSize: 25
+          }
+        }
+      },
+      plugins: {
+        legend: {
+          display: false
+        },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              return context.dataset.label + ": " + context.raw + "%";
+            }
+          }
+        }
       }
-      return true;
     }
-  </script>
-</body>
-</html>
+  });
+</script>
