@@ -1,251 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AI INVEST HUB</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Invest Hub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #eef6ff;
-      color: #002244;
-    }
-    header {
-      background-color: #003366;
-      padding: 1rem 2rem;
+      background-color: #0e1a2b;
       color: white;
+    }
+    nav {
+      background-color: #132d4f;
+      padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
     nav a {
       color: white;
+      margin-left: 20px;
       text-decoration: none;
-      margin-left: 1rem;
+      font-weight: bold;
     }
-    .hero {
+    header {
       padding: 2rem;
       text-align: center;
-      background: linear-gradient(to right, #4facfe, #00f2fe);
-      color: white;
     }
-    .content {
+    .section {
       padding: 2rem;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
     }
-    .image-section {
-      margin: 2rem 0;
-      text-align: center;
+    .images {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
-    .image-section img {
-      width: 100%;
-      max-width: 500px;
-      display: block;
-      margin: 0 auto;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    .images img {
+      width: 300px;
+      border-radius: 10px;
     }
     form {
-      background: #e6f0ff;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      background: #1a2a40;
+      padding: 2rem;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
     }
-    form input, form button {
-      width: 100%;
+    input, select, textarea {
       padding: 0.8rem;
-      margin-top: 0.3rem;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-    form button {
-      background-color: #003366;
-      color: white;
+      border-radius: 5px;
       border: none;
-      margin-top: 1rem;
+      font-size: 1rem;
+    }
+    button {
+      padding: 1rem;
+      background-color: #007bff;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      border-radius: 5px;
       cursor: pointer;
     }
-    .contact {
-      background-color: #e6f0ff;
-      padding: 1rem;
-      text-align: center;
-    }
-    footer {
-      background-color: #002244;
+    .whatsapp-link {
+      display: inline-block;
+      background: #25D366;
       color: white;
-      text-align: center;
-      padding: 1rem;
+      padding: 10px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    canvas {
+      margin-top: 30px;
+      background: white;
+      border-radius: 8px;
     }
   </style>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
-  <header>
+  <nav>
     <div><strong>AI INVEST HUB</strong></div>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
+    <div>
+      <a href="#about">About</a>
+      <a href="#profits">Profits</a>
+      <a href="#form">Contact</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Experience the Future of Trading!</h1>
+    <p>Let our AI trade Forex & Crypto for you with up to <strong>75% returns</strong> in 24 hours.</p>
   </header>
 
-  <section class="hero">
-    <h1>Experience the Future of Trading!</h1>
-    <p>🚀 Trade smarter, not harder. Our AI does all the work — you just earn.</p>
-    <p>✅ No charts, no stress. Up to <strong>75% profit within 24 hours</strong></p>
-    <p>💰 <strong>Profits are paid directly to your account</strong> — no delays.</p>
-    <p>🔒 Secure. Fast. 100% Automated. Minimum to invest: <strong>$25</strong></p>
-  </section>
-
-  <section class="content" style="background-color:#fff; border-top: 2px solid #dde;">
-    <h2 style="text-align:center; color:#003366;">📘 How to Invest with AI INVEST HUB</h2>
-    <ol style="max-width: 800px; margin: 2rem auto; line-height: 1.7; font-size: 1.1rem; color: #002244;">
-      <li><strong>Step 1:</strong> Fill in the form with your <em>name, email, phone, country</em>, and the <strong>amount you wish to invest</strong> (minimum $25).</li>
-      <li><strong>Step 2:</strong> Click the <strong>"Submit & Get Started"</strong> button. Your request goes directly to our team.</li>
-      <li><strong>Step 3:</strong> You'll receive payment instructions via email or WhatsApp.</li>
-      <li><strong>Step 4:</strong> Once confirmed, our AI system starts trading on your behalf within 1 hour.</li>
-      <li><strong>Step 5:</strong> Your <strong>profits (up to 75%)</strong> are paid to you within 24 hours. Stress-free & automated.</li>
-    </ol>
-    <p style="text-align:center; font-weight:bold; margin-top: 2rem;">
-      💬 Need help? <a href="https://wa.me/254710390198" style="color:#003366;">Chat with support on WhatsApp</a>
-    </p>
-  </section>
-
-  <section class="content">
-    <div class="image-section">
-      <img src="graph1.jpg" alt="Forex graph showing market analysis by AI">
-    </div>
-    <div class="image-section">
-      <img src="profit.jpg" alt="Phone screen showing 75% profit growth">
-    </div>
-    <div class="image-section">
-      <img src="ai-graph.jpg" alt="Automated AI system executing profitable trades">
-    </div>
-  </section>
-
-  <section class="content">
-    <h2 style="text-align:center;">Profit Distribution Chart</h2>
-    <div style="max-width: 600px; margin: 0 auto;">
-      <canvas id="barChart"></canvas>
-    </div>
-  </section>
-
-  <section class="content">
-    <form action="https://formsubmit.co/aitradinghubinvestnecitizen@gmail.com" method="POST" onsubmit="return validateAmount()">
-      <input type="hidden" name="_autoresponse" value="🎉 Thank you for contacting AI INVEST HUB – where intelligent trading meets real results! Our AI platform will analyze your submission and one of our team members will reach out shortly. Meanwhile, relax and let AI take over your trading journey. 💹">
-
-      <label for="name">Full Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Your Email Address:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="country">Your Country:</label>
-      <input type="text" id="country" name="country" required>
-
-      <label for="phone">Phone Number:</label>
-      <input type="tel" id="phone" name="phone" required>
-
-      <label for="amount">Amount to Invest (USD):</label>
-      <input type="number" id="amount" name="amount" min="25" required>
-
-      <button type="submit">Submit & Get Started</button>
-    </form>
-  </section>
-
-  <section class="content" style="background-color: #e6f0ff; border-top: 2px solid #cce;">
-    <h2 style="text-align:center; color:#003366;">What Our Customers Say</h2>
-    <div style="display: grid; gap: 1.5rem; max-width: 900px; margin: 2rem auto;">
-
-      <div style="background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
-        🇿🇦 <strong>Bongani (South Africa)</strong>
-        <p>"AI trading has changed the game for me. I no longer need to watch charts all day. It's smart, fast, and profitable!"</p>
-      </div>
-
-      <div style="background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
-        🇦🇪 <strong>Philippie Duvai (UAE)</strong>
-        <p>"I never had trading knowledge, but now I’m earning daily profits through AI. It’s automated and stress-free!"</p>
-      </div>
-
-      <div style="background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
-        🇫🇷 <strong>Amorim (France)</strong>
-        <p>"AI-based investments helped me grow my income consistently. It’s reliable and easy to use even for beginners."</p>
-      </div>
-
-      <div style="background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
-        🇧🇩 <strong>Andrew (Bangladesh)</strong>
-        <p>"I’ve tried many platforms, but this AI trading system is the only one that delivered stable returns without needing much effort."</p>
-      </div>
-
-      <div style="background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
-        🇰🇪 <strong>Joshuah Roch (Kenya)</strong>
-        <p>"AI trading is the future. I only enter my details and the system handles the rest. It's like having a professional trade for me."</p>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="contact">
-    <p>📧 Email us directly: 
-      <a href="mailto:aitradinghubinvestnecitizen@gmail.com">aitradinghubinvestnecitizen@gmail.com</a>
-    </p>
+  <div class="section" id="about">
+    <h2>About Us</h2>
     <p>
-      💬 <strong>Start a chat on WhatsApp:</strong><br/>
-      <a href="https://wa.me/254710390198?text=Hi%20I’m%20interested%20in%20AI%20Invest%20Hub.%20Tell%20me%20more!" target="_blank">
-        Click here to chat now
-      </a>
+      Trading with AI is smart, fast, and extremely profitable. Our intelligent system analyzes Forex and cryptocurrency markets in real time, executing trades for you with precision and speed.
+      Whether you have trading knowledge or not, our AI does all the work. No complex charts or strategies needed. <br><br>
+      Minimum investment: <strong>$25</strong>.  
+      Profits are paid directly to your bank account after 24 hours. Let technology work for you while you relax.
     </p>
-  </section>
+    <div class="images">
+      <img src="forex.jpg" alt="Forex graph">
+      <img src="profit.jpg" alt="Phone showing 75% profit">
+    </div>
+  </div>
 
-  <footer>
-    &copy; 2025 AI INVEST HUB. All rights reserved. | Designed for profit with AI 💹
-  </footer>
-
-  <script>
-    function validateAmount() {
-      const amount = document.getElementById("amount").value;
-      if (parseFloat(amount) < 25) {
-        alert("⚠️ The minimum investment is $25. Please enter a valid amount.");
-        return false;
-      }
-      return true;
-    }
-
-    const ctxBar = document.getElementById('barChart').getContext('2d');
-    const barChart = new Chart(ctxBar, {
-      type: 'bar',
-      data: {
-        labels: ['Your Profit', 'Platform Share', 'Reserve/Fees'],
-        datasets: [{
-          label: 'Profit Distribution (%)',
-          data: [75, 15, 10],
-          backgroundColor: ['#00b894', '#0984e3', '#ffeaa7'],
-          borderColor: '#333',
-          borderWidth: 1
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            max: 100,
-            ticks: {
-              stepSize: 25
+  <div class="section" id="profits">
+    <h2>Profit Sharing Chart</h2>
+    <canvas id="profitChart" width="400" height="200"></canvas>
+    <script>
+      const ctx = document.getElementById('profitChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['You', 'Company'],
+          datasets: [{
+            label: 'Profit Share (%)',
+            data: [75, 25],
+            backgroundColor: ['#007bff', '#17a2b8'],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: {
+              beginAtZero: true,
+              max: 100
             }
           }
-        },
-        plugins: {
-          legend: {
-            display: false
-          }
         }
-      }
-    });
-  </script>
+      });
+    </script>
+  </div>
+
+  <div class="section" id="form">
+    <h2>Join Now</h2>
+    <form action="mailto:aitradinghubinvestnecitizen@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="email" name="Email" placeholder="Your Email" required>
+      <input type="tel" name="Phone" placeholder="Your Phone Number" required>
+      <input type="text" name="Country" placeholder="Your Country" required>
+      <input type="number" name="Amount" placeholder="Investment Amount in USD (min $25)" required>
+      <textarea name="Message" placeholder="Additional Message (Optional)"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <a href="https://wa.me/447877601118?text=Hi%20I’m%20interested%20in%20AI%20Invest%20Hub.%20Tell%20me%20more!" target="_blank" class="whatsapp-link">
+      Chat with us on WhatsApp
+    </a>
+  </div>
 
 </body>
 </html>
