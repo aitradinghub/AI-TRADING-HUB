@@ -2,163 +2,174 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI Invest Hub</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <title>AI Trading Hub Invest</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
+      background: #ffffff;
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0e1a2b;
-      color: white;
+      padding: 0;
+      color: #333;
     }
-    nav {
-      background-color: #132d4f;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav a {
-      color: white;
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    header {
-      padding: 2rem;
+    header, footer {
+      background: #f4f4f4;
+      padding: 20px;
       text-align: center;
     }
-    .section {
-      padding: 2rem;
-      max-width: 1000px;
+    h1, h2 {
+      margin-bottom: 10px;
+    }
+    .container {
+      width: 90%;
+      max-width: 1100px;
       margin: auto;
+      padding: 20px;
     }
-    .images {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .images img {
-      width: 300px;
-      border-radius: 10px;
-    }
-    form {
-      background: #1a2a40;
-      padding: 2rem;
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    input, select, textarea {
-      padding: 0.8rem;
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
       border-radius: 5px;
-      border: none;
-      font-size: 1rem;
     }
-    button {
-      padding: 1rem;
-      background-color: #007bff;
-      border: none;
+    form button {
+      background: #007BFF;
       color: white;
-      font-size: 1rem;
-      border-radius: 5px;
+      border: none;
+      padding: 10px 20px;
       cursor: pointer;
-    }
-    .whatsapp-link {
-      display: inline-block;
-      background: #25D366;
-      color: white;
-      padding: 10px 15px;
-      border-radius: 8px;
-      text-decoration: none;
-      margin-top: 15px;
-      font-weight: bold;
+      border-radius: 5px;
     }
     canvas {
-      margin-top: 30px;
-      background: white;
-      border-radius: 8px;
+      max-width: 100%;
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <div><strong>AI INVEST HUB</strong></div>
-    <div>
-      <a href="#about">About</a>
-      <a href="#profits">Profits</a>
-      <a href="#form">Contact</a>
-    </div>
-  </nav>
+<header>
+  <h1>AI Trading Hub Invest</h1>
+  <p>Grow with us – Smart, Global Investing</p>
+</header>
 
-  <header>
-    <h1>Experience the Future of Trading!</h1>
-    <p>Let our AI trade Forex & Crypto for you with up to <strong>75% returns</strong> in 24 hours.</p>
-  </header>
+<div class="container">
 
-  <div class="section" id="about">
+  <!-- About Us -->
+  <section>
     <h2>About Us</h2>
-    <p>
-      Trading with AI is smart, fast, and extremely profitable. Our intelligent system analyzes Forex and cryptocurrency markets in real time, executing trades for you with precision and speed.
-      Whether you have trading knowledge or not, our AI does all the work. No complex charts or strategies needed. <br><br>
-      Minimum investment: <strong>$25</strong>.  
-      Profits are paid directly to your bank account after 24 hours. Let technology work for you while you relax.
-    </p>
-    <div class="images">
-      <img src="forex.jpg" alt="Forex graph">
-      <img src="profit.jpg" alt="Phone showing 75% profit">
+    <p>Founded in 2016 and based in the United Kingdom (BST timezone), AI Trading Hub Invest is an international investment platform dedicated to helping individuals grow their wealth using advanced AI-driven trading strategies. We operate across borders, offering reliable, secure, and high-yield investment solutions to clients worldwide.</p>
+
+    <p><strong>Our Mission:</strong> To empower global investors through intelligent, transparent, and accessible financial technology that delivers consistent profits and builds long-term financial security.</p>
+
+    <p><strong>Our Vision:</strong> To become the world’s most trusted AI-powered investment partner by redefining how individuals build wealth and achieve financial independence in a digital economy.</p>
+  </section>
+
+  <!-- How to Invest + Chart -->
+  <section>
+    <h2>How to Invest</h2>
+    <p>Investing with us is simple:</p>
+    <ol>
+      <li>Contact us via email or WhatsApp</li>
+      <li>We will guide you step-by-step</li>
+      <li>You earn 75% profit, we retain 25% for service and management</li>
+    </ol>
+    <canvas id="investmentChart" width="400" height="400"></canvas>
+  </section>
+
+  <!-- Customer Feedback Section -->
+  <section style="background-color: #f0f4f8; padding: 40px 20px;">
+    <h2 style="text-align: center;">What Our Customers Say</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; max-width: 1100px; margin: auto;">
+
+      <div style="background-color: #ffffff; border-left: 5px solid #007BFF; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+        <p style="font-weight: bold;">🇺🇸 John M. – USA</p>
+        <p>"I was skeptical at first, but after three months with AI Trading Hub Invest, I’m honestly impressed. The 75% return goes straight to my wallet, and I’ve never had issues with withdrawals. Their team responds quickly on WhatsApp and provides clear reports. This is a real game-changer in investing."</p>
+      </div>
+
+      <div style="background-color: #ffffff; border-left: 5px solid #28a745; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+        <p style="font-weight: bold;">🇰🇪 Faith N. – Kenya</p>
+        <p>"AI Trading Hub has helped me grow my savings more than any local bank account could. Their process is simple, and the returns are very real. I started with a small investment and now I’m planning to increase it. It's reliable and transparent, something rare in today's financial world."</p>
+      </div>
+
+      <div style="background-color: #ffffff; border-left: 5px solid #ffc107; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+        <p style="font-weight: bold;">🇿🇦 Sipho D. – South Africa</p>
+        <p>"I joined AI Trading Hub Invest after a friend recommended it. So far, I have received every payout on time, and the investment dashboard is easy to understand. It’s a great way to build passive income. I’m also impressed by how the 75% profit split benefits the investor more."</p>
+      </div>
+
+      <div style="background-color: #ffffff; border-left: 5px solid #17a2b8; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+        <p style="font-weight: bold;">🇨🇩 Jean K. – Congo</p>
+        <p>"At first I didn’t trust online investment platforms, but AI Trading Hub changed my mind. They are honest, helpful, and their returns are consistent. The support team helped me with every step and explained everything in detail. Now I tell my friends and family to invest too."</p>
+      </div>
+
+      <div style="background-color: #ffffff; border-left: 5px solid #dc3545; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+        <p style="font-weight: bold;">🇧🇷 Camila R. – Brazil</p>
+        <p>"This platform has exceeded my expectations. I joined AI Trading Hub Invest looking for an extra source of income, and it has delivered beyond what I imagined. The profit-sharing model is fair and well-balanced. I feel confident and secure knowing my money is growing with professionals."</p>
+      </div>
+
     </div>
-  </div>
+  </section>
 
-  <div class="section" id="profits">
-    <h2>Profit Sharing Chart</h2>
-    <canvas id="profitChart" width="400" height="200"></canvas>
-    <script>
-      const ctx = document.getElementById('profitChart').getContext('2d');
-      new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: ['You', 'Company'],
-          datasets: [{
-            label: 'Profit Share (%)',
-            data: [75, 25],
-            backgroundColor: ['#007bff', '#17a2b8'],
-            borderWidth: 1
-          }]
-        },
-        options: {
-          responsive: true,
-          scales: {
-            y: {
-              beginAtZero: true,
-              max: 100
-            }
-          }
-        }
-      });
-    </script>
-  </div>
+  <!-- Feedback Form -->
+  <section style="margin-top: 40px;">
+    <h2>Submit Your Feedback</h2>
+    <form>
+      <label>Name</label>
+      <input type="text" placeholder="Your name" required>
 
-  <div class="section" id="form">
-    <h2>Join Now</h2>
-    <form action="mailto:aitradinghubinvestnecitizen@gmail.com" method="POST" enctype="text/plain">
-      <input type="text" name="Name" placeholder="Your Name" required>
-      <input type="email" name="Email" placeholder="Your Email" required>
-      <input type="tel" name="Phone" placeholder="Your Phone Number" required>
-      <input type="text" name="Country" placeholder="Your Country" required>
-      <input type="number" name="Amount" placeholder="Investment Amount in USD (min $25)" required>
-      <textarea name="Message" placeholder="Additional Message (Optional)"></textarea>
-      <button type="submit">Submit</button>
+      <label>Country</label>
+      <select required>
+        <option value="">Select your country</option>
+        <option>USA</option>
+        <option>Kenya</option>
+        <option>South Africa</option>
+        <option>Congo</option>
+        <option>Australia</option>
+        <option>Brazil</option>
+      </select>
+
+      <label>Feedback</label>
+      <textarea rows="4" placeholder="Your feedback..." required></textarea>
+
+      <button type="submit">Submit Feedback</button>
     </form>
-    <a href="https://wa.me/447877601118?text=Hi%20I’m%20interested%20in%20AI%20Invest%20Hub.%20Tell%20me%20more!" target="_blank" class="whatsapp-link">
-      Chat with us on WhatsApp
-    </a>
-  </div>
+  </section>
+
+  <!-- Contact Info -->
+  <section style="margin-top: 40px;">
+    <h2>Contact Us</h2>
+    <p><strong>Email:</strong> <a href="mailto:aitradinghubinvestnecitizen@gmail.com">aitradinghubinvestnecitizen@gmail.com</a></p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/YOURNUMBER">Click to chat on WhatsApp</a></p>
+  </section>
+</div>
+
+<footer>
+  &copy; 2025 AI Trading Hub Invest. All rights reserved.
+</footer>
+
+<!-- Chart.js Pie Chart -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctx = document.getElementById('investmentChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'pie',
+    data: {
+      labels: ['Investor (75%)', 'Company (25%)'],
+      datasets: [{
+        data: [75, 25],
+        backgroundColor: ['#28a745', '#dc3545'],
+        borderColor: ['#ffffff', '#ffffff'],
+        borderWidth: 2
+      }]
+    },
+    options: {
+      plugins: {
+        legend: {
+          position: 'bottom'
+        }
+      }
+    }
+  });
+</script>
 
 </body>
 </html>
